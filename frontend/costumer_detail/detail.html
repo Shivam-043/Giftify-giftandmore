@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <div class="form-style-5">
+      <form>
+        <!-- <form action="http://127.0.0.1:3001/form" method="post"> -->
+        <fieldset>
+          <legend><span class="number">1</span> Personal Info</legend>
+          <input type="hidden" name="colors" value="" />
+          <input type="hidden" name="addons" value="" />
+          <input type="hidden" name="product_id" value="" />
+          <input type="hidden" name="total_price" value="" />
+          <input type="text" name="name" placeholder="Your Name *" />
+          <input type="email" name="email" placeholder="Your Email *"/>
+
+          <input
+            type="number"
+            name="mobile_no"
+            placeholder="Your Mobile Number *"
+          />
+          <!-- <input
+            type="number"
+            name="OTP_verify"
+            placeholder="OTP"
+          /> -->
+          <textarea name="address" placeholder="Address *"></textarea>
+          <label for="job">Interests:</label>
+          <!-- <select id="job" name="field4">
+        <optgroup label="Indoors">
+          <option value="fishkeeping">Fishkeeping</option>
+          <option value="reading">Reading</option>
+          <option value="boxing">Boxing</option>
+          <option value="debate">Debate</option>
+          <option value="gaming">Gaming</option>
+          <option value="snooker">Snooker</option>
+          <option value="other_indoor">Other</option>
+        </optgroup>
+        <optgroup label="Outdoors">
+          <option value="football">Football</option>
+          <option value="swimming">Swimming</option>
+          <option value="fishing">Fishing</option>
+          <option value="climbing">Climbing</option>
+          <option value="cycling">Cycling</option>
+          <option value="other_outdoor">Other</option>
+        </optgroup>
+        </select>       -->
+        </fieldset>
+        <fieldset>
+          <legend><span class="number">2</span> Additional Info</legend>
+          <textarea name="Name_on_Gift" placeholder="You Are Gifting to....."></textarea>
+        </fieldset>
+        <!-- <input type="submit" value="Proceed To Ship" /> -->
+        <input type="button" onclick="ValidateOtp()" value="Proceed To Ship" />
+        <!-- <button onclick="formaction()">Proceed To Ship</button> -->
+      </form>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="detail.js"></script>
+    <!-- <script>
+      const Server = "http://127.0.0.1:3001";
+
+      // formAction();
+      function formAction() {
+        var Server2 = Server + "/form";
+        var data = JSON.parse(localStorage.getItem("data"));
+        var product_id = localStorage.getItem("product_id");
+        var Total_price = localStorage.getItem("Total_price");
+        //   document.getElementsByTagName("input")[0].value = JSON.stringify(data.colors);
+        //   document.getElementsByTagName("input")[1].value = JSON.stringify(data.addons);
+        //   document.getElementsByTagName("input")[2].value = product_id;
+        //   document.getElementsByTagName("input")[3].value = Total_price;
+        var data = {
+          colors: JSON.stringify(data.colors),
+          addons: JSON.stringify(data.addons),
+          product_id: product_id,
+          total_price: Total_price,
+          name: document.forms[0].name.value,
+          email: document.forms[0].email.value,
+          mobile_no: document.forms[0].mobile_no.value,
+          address: document.forms[0].address.value,
+          Name_on_Gift: document.forms[0].Name_on_Gift.value,
+        };
+
+        axios
+          .post(Server2, data)
+          .then((res) => {
+            console.log(res.data);
+            // window.location.href="account.html";
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+
+        // console.log(data);
+      }
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift-1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../index.css" />
+
+    <style>@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Julius+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');</style>
+  </head>
+  <body>
+    <section id="header">
+      <!-- <a href="#"><img src="cdn.shopify.com\s\files\files\ETQ_Logo_Black_vacature2_aae9e6ba-beff-414a-a3e3-098885de1fff.webp"</a> -->
+      <a href="../index.html"><img src="../assets/img/signature.jpg" class="logo" /></a>
+
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="../index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li>
+            <a href="../cart.html" id="cart"
+              ><i class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+
+      <div id="mobile">
+        <a href="../cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fa-solid fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="product-image">
+      <div class="products">
+        <img
+            src="../assets/img/istockphoto-491520707-612x612.jpg"
+            alt=""
+            class="img"
+        />
+        <img
+            src="../assets/img/istockphoto-491520707-612x612.jpg"
+            alt=""
+            class="img"
+        />
+        <img
+            src="../assets/img/istockphoto-491520707-612x612.jpg"
+            class="img"
+            alt=""
+        />
+        <img
+            src="../assets/img/istockphoto-491520707-612x612.jpg"
+            class="img"
+            alt=""
+        />
+        <img
+            src="../assets/img/istockphoto-491520707-612x612.jpg"
+            alt=""
+            class="img"
+        />
+        <img
+            src="../assets/img/istockphoto-491520707-612x612.jpg"
+            alt=""
+            class="img"
+        />
+      </div>
+      <div class="cart cart_item">
+        <h4 id="product_name">LT 03 Premium Nappa All Black</h4>
+        <p id="brand_name">Premium Nappa</p>
+        <p>
+          <span class="strike-through" style="text-decoration: line-through">Rs. 250</span> Rs. <span id="cart_value_before" class="price">200</span> 
+        </p>
+        <div class="cart-button" id="cart-button">
+          <button type="button" class="product-options" id="color" onclick="addon1()">
+            <span>Colour</span> <i class="fa-sharp fa-solid fa-angle-down"></i>
+          </button>
+          </button>
+          <!-- <button type="button" onclick="addon4()" class="product-options" id="required_btn">
+            <span>Required</span> <i class="fa-sharp fa-solid fa-angle-down"></i>
+          </button> -->
+          <button type="button" onclick="addon2()" class="product-options" id="addon">
+            <span>Addon</span> <i class="fa-sharp fa-solid fa-angle-down"></i>
+          </button>
+        </div>
+        <section id="required">
+          <div class="occasion" style="height: 20vh;">
+            <div class="header1">
+              <h3>Occasion</h3>
+              <!-- <i class="fa-regular fa-circle-xmark" id="close_required"></i> -->
+            </div>
+            <hr/>
+            <div class="required" id="radio_required">
+              <div class="align">
+                <input type="radio" name="occasion" value="Birthday"> <span>Birthday</span> </input>
+              </div>
+              <div class="align">
+                <input type="radio" name="occasion" value="Love"> <span>Love</span> </input>
+              </div>
+              <div class="align">
+                <input type="text" id="occ_name" placeholder="Any Other Occasion....">
+              </div>
+            </div>
+          </div>
+          <div class="text_main" style="height: 20vh;">
+            <div class="header1">
+              <h3>Text Screen</h3>
+            </div>
+            <hr />
+            <div class="text_screen" id="radio_type">
+              <input type="text" id="text_sc" placeholder="Type something for your loved ones" style="height: 100px;">
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="product-choose-color">
+      <div class="color-screen">
+        <div class="header1">
+          <h3>Choose Color Section</h3>
+          <i class="fa-regular fa-circle-xmark" id="close_color"></i>
+        </div>
+        <hr />
+        <h4 style="padding-top: 30px; font-size: 20px">Best Gift</h4>
+        <p style="padding-bottom: 20px">Uksdldsnkdf</p>
+        <div class="product-color">
+          <div class="product-color-number" onclick="change_style(0)" value="0">
+            <a href="#"
+              ><img src="../assets/img/istockphoto-491520707-612x612.jpg" alt=""
+            /></a>
+            <div class="color-des">
+              <h4 class="color_name">Black</h4>
+              <p>Best Quality</p>
+            </div>
+            <p>
+              <span class="strike-through" style="text-decoration: line-through">Rs. 250</span> Rs. <span class="price" >200</span> 
+            </p>
+          </div>
+
+          <div class="product-color-number" onclick="change_style(1)" value="0">
+            <a href="#"
+              ><img src="../assets/img/istockphoto-491520707-612x612.jpg" alt=""
+            /></a>
+            <div class="color-des">
+              <h4 class="color_name">White</h4>
+              <p>Best Quality</p>
+            </div>
+            <p>
+              <span class="strike-through" style="text-decoration: line-through">Rs. 250</span> Rs. <span class="price" >200</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product-addon">
+      <div class="add_on">
+        <div class="header">
+          <div class="header1">
+            <h3>Add On</h3>
+            <h3>rs.<span id="cart_value" class="price"></span></h3>
+          </div>
+          <div class="close_icon">
+            <i class="fa-regular fa-circle-xmark" id="close_addon"></i>
+          </div>
+        </div>
+
+        <hr />
+        <h4 style="padding-top: 30px; font-size: 20px">Best Gift</h4>
+        <p style="padding-bottom: 20px">Uksdldsnkdf</p>
+        <div class="product-color" style="padding-bottom: 5vh;">
+          <label class="add_on_item">
+            <div class="fxwGX">
+              <label class="b5XpK">
+                <input class="_1WnJw checkbox" type="checkbox" name="Option 1" onchange="add_value('0')"/>
+                <span class="_1X1xw"></span>
+                <svg width="16" class="_2m7ny" viewBox="0 0 24 24">
+                  <path d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M9.5,18.25 L20.75,7.43269231 L19,5.75 L9.5,14.8846154 L5,10.5576923 L3.25,12.2403846 L9.5,18.25 Z"></path>
+                </svg>
+              </label>
+            </div>
+            <div class="_3c6_x UNWoi">
+              <span class="_2OGeA">Option 1</span><span class="_1RskK addon_value" >45</span>
+            </div>
+          </label>
+
+          <label class="add_on_item">
+            <div class="fxwGX">
+              <label class="b5XpK">
+                <input class="_1WnJw checkbox" type="checkbox" name="Option 2" onchange="add_value('1')"/>
+                <span class="_1X1xw"></span>
+                <svg width="16" class="_2m7ny" viewBox="0 0 24 24">
+                  <path d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M9.5,18.25 L20.75,7.43269231 L19,5.75 L9.5,14.8846154 L5,10.5576923 L3.25,12.2403846 L9.5,18.25 Z"></path>
+                </svg>
+              </label>
+            </div>
+            <div class="_3c6_x UNWoi">
+              <span class="_2OGeA">Option 2</span><span class="_1RskK addon_value" >31</span>
+            </div>
+          </label>
+
+          <label class="add_on_item">
+            <div class="fxwGX">
+              <label class="b5XpK">
+                <input class="_1WnJw checkbox" type="checkbox" name="Option 3" onchange="add_value('2')"/>
+                <span class="_1X1xw"></span>
+                <svg width="16" class="_2m7ny" viewBox="0 0 24 24">
+                  <path d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M9.5,18.25 L20.75,7.43269231 L19,5.75 L9.5,14.8846154 L5,10.5576923 L3.25,12.2403846 L9.5,18.25 Z"></path>
+                </svg>
+              </label>
+            </div>
+            <div class="_3c6_x UNWoi">
+              <span class="_2OGeA">Option 3</span><span class="_1RskK addon_value" >68</span>
+            </div>
+          </label>
+
+
+          <div class="amount" onclick="addTo_cart()" method="post" action="/">
+            <span class="total" style="font-weight: 600;">Total <span id="rupee" name="rupee"></span></span>
+            <span class="items" style="float: right; text-transform: uppercase;">Add Item</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="choose_type">
+      <div class="color-screen" style="height: 70vh;">
+        <div class="header1">
+          <h3>Choose Types</h3>
+          <i class="fa-regular fa-circle-xmark" id="close_type"></i>
+        </div>
+        <hr />
+        <div class="type" id="radio_type">
+            <input type="radio" name="type" value="Bracellet"> Bracellet</input>
+            <input type="radio" name="type" value="Jewels"> Jewels</input>
+        </div>
+      </div>
+    </section>
+
+    <section id="special_product">
+      <div class="special_products" style="height: 70vh; margin-top: 30px; margin-left: none;">
+        <div class="header1">
+          <h3>Choose Special Products</h3>
+          <i class="fa-regular fa-circle-xmark" id="close_products"></i>
+        </div>
+        <hr />
+        <div class="products" id="radio_type">
+            <input type="radio" name="product" value="Doodle Art"> Doodle Art</input>
+            <input type="radio" name="product" value="Mug"> Mug</input>
+            <input type="radio" name="product" value="Photo Frame"> Photo Frame</input>
+        </div>
+      </div>
+    </section> -->
+
+    
+
+
+    <section id="footer" class="footer_p_d">
+      <div class="about">
+        <h3>About</h3>
+        <p>
+          We design wardrobe essentials with a strong silhouette, in tonal
+          colorways. Our style never changes. It evolves. Continuously.
+        </p>
+      </div>
+
+      <div class="address">
+        <h3>Address</h3>
+        <p>Duinkerkenstraat 3A 9723 BN Groningen The Netherlands</p>
+      </div>
+
+      <div class="contact">
+        <h3>Contact</h3>
+        <a href="mailto:giftify@gmail.com">Email Here</a>
+        <a href="tel:+910000000000">Phone Here</a>
+      </div>
+
+      <div class="info">
+        <h3>Info</h3>
+        <a href="#">Shipping</a>
+        <a href="#">Return</a>
+        <a href="#">Store Locator</a>
+        <a href="#">Terms Of Service</a>
+      </div>
+
+      <div class="follow">
+        <h3>Follow Us</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Pintrest</a>
+        <a href="#">Twitter</a>
+      </div>
+    </section>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
