@@ -17,7 +17,9 @@ const close_products = document.getElementById("close_products");
 var brand;
 
 // const Server = "http://15.207.71.90:3001";
-const Server = "http://127.0.0.1:3001";
+// const Server = "http://127.0.0.1:3001";
+const Server = "http://15.207.71.90:3001";
+
 
 localStorage.removeItem("addons");
 localStorage.removeItem("colors");
