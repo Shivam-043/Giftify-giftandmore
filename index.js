@@ -201,6 +201,7 @@ app.post("/otp", (req, res) => {
         input: process.stdin,
         output: process.stdout,
       });
+      console.log(otpCode);
       readline.question("Please enter the OTP:", (otpCode) => {
         client.verify.v2
           .services(verifySid)
