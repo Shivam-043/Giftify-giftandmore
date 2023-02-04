@@ -280,6 +280,6 @@ app.post("/otp", (req, res) => {
 // run();
 
 
-app.listen(80, () => {
+app.listen(3001, () => {
   console.log("started successfully");
 });

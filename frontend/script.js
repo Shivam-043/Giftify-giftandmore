@@ -21,6 +21,7 @@ var brand;
 // const Server = "http://15.207.71.90:3001";
 
 
+
 localStorage.removeItem("addons");
 localStorage.removeItem("colors");
 // var cart_value;

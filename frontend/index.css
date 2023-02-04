@@ -1365,7 +1365,7 @@ span {
 
   #products_view {
     overflow-x: auto;
-    /* width: 1400px; */
+    width: 1600px;
     height: 200vh;
     margin-top: 60vh;
   }
@@ -1431,6 +1431,10 @@ span {
   #close_color{
     font-size: 40px;
     margin-top: 20px;
+  }
+
+  #close_addon{
+    font-size: 60px;
   }
 
   #product-choose-color .color-screen {

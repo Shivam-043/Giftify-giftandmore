@@ -4,6 +4,8 @@
 
 
 // formAction();
+
+
 function formaction() {
   var Server2 = Server + "/form";
   var data = JSON.parse(localStorage.getItem("data"));
