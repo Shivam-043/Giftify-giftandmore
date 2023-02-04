@@ -25,16 +25,20 @@ localStorage.removeItem("addons");
 localStorage.removeItem("colors");
 // var cart_value;
 var addon_value;
-
+const icon = document.getElementById("cart_icon");
 if (bar) {
   bar.addEventListener("click", () => {
     nav.classList.add("active");
+    bar.style.display = "none"
+    icon.style.display = "none";
   });
 }
 
 if (close) {
   close.addEventListener("click", () => {
     nav.classList.remove("active");
+    icon.style.display = "flex";
+    bar.style.display ="flex";
   });
 }
 

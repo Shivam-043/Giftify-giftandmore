@@ -82,7 +82,7 @@ body {
 
 #navbar li a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 40px;
   font-weight: 450;
   color: #1a1a1a;
   transition: 0.7s ease;
@@ -1085,10 +1085,13 @@ span {
 
   #navbar.active {
     right: 0px;
+    height: 400vh;
+    width: 150vw;
   }
 
   #navbar li {
     padding-bottom: 15px;
+    padding-top: 15px;
   }
 
   #navbar li a.active::after,
@@ -1110,7 +1113,7 @@ span {
   #mobile i {
     padding-left: 20px;
     color: #1a1a1a;
-    font-size: 24px;
+    font-size: 60px;
   }
   #close {
     display: initial;
@@ -1143,6 +1146,7 @@ span {
   #header .logo {
     left: 10vw;
     position: relative;
+    width: 130vw;
   }
   #footer_product {
     display: none;
