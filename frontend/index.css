@@ -82,7 +82,7 @@ body {
 
 #navbar li a {
   text-decoration: none;
-  font-size: 40px;
+  font-size: 16px;
   font-weight: 450;
   color: #1a1a1a;
   transition: 0.7s ease;
@@ -1272,7 +1272,7 @@ span {
   #products_view {
     overflow-x: auto;
     width: 1400px;
-    height: 150vh;
+    height: 160vh;
   }
 
   #branding {
@@ -1338,5 +1338,9 @@ span {
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+  }
+
+  #navbar li a {
+    font-size: 60px;
   }
 }
