@@ -173,38 +173,21 @@ app.post("/otp", (req, res) => {
   console.log(mobile_no);
 
   var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
-  // client.messages
-  //   .create({
-  //     body: `Please Enter this code : ${seq}`,
-  //     from: "+15058713894",
-  //     to: "+91"+ mobile_no,
-  //   })
-  //   .then((message) => {
-  //     console.log(message.sid);
-  //     console.log(seq);
-  //     res.send(seq);
-  //     // res.send(seq);
-  //   } )
-  //   .catch((error) => {
-  //     console.log(error);
-  //     res.status(102).send(new Error(error));
-  //   });
-
-    const from = "Vonage APIs"
-    const to = mobile_no
-    const text = `Your GiftiFy OTP: ${seq}`
-    
-    async function sendSMS() {
-        await vonage.sms.send({to, from, text})
-            .then(resp => { console.log('Message sent successfully'); console.log(resp); })
-            .catch(err => { console.log('There was an error sending the messages.'); console.error(err); });
-    }
-    
-    sendSMS();
-    
-    
-    app.listen(3001, () => {
-      console.log("started successfully");
+  client.messages
+    .create({
+      body: `Please Enter this code : ${seq}`,
+      from: "+15058713894",
+      to: "+91"+ mobile_no,
+    })
+    .then((message) => {
+      console.log(message.sid);
+      console.log(seq);
+      res.send(seq);
+      // res.send(seq);
+    } )
+    .catch((error) => {
+      console.log(error);
+      res.status(102).send(new Error(error));
     });
 
     // client.verify.v2
@@ -264,13 +247,37 @@ app.post("/otp", (req, res) => {
 //   var Name_on_Gift=req.body.Name_on_Gift;
 
 // }
+const SERVICE_PLAN_ID = '51100a75b1744695a9fc457b6dc53d6a';
+const API_TOKEN = '48fb5cfa27464d77a73a7cd31c8ae6ab';
+const SINCH_NUMBER = '+447520652018';
+const TO_NUMBER = '+919520443591';
 
-const { Vonage } = require('@vonage/server-sdk')
+const fetch = require("node-fetch");
 
-const vonage = new Vonage({
-  apiKey: "2ca019c0",
-  apiSecret: "gGHOfEGfU9wHq0v1"
-})
+async function run() {
+  const resp = await fetch(
+    'https://us.sms.api.sinch.com/xms/v1/' + SERVICE_PLAN_ID + '/batches',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + API_TOKEN
+      },
+      body: JSON.stringify({
+        from: SINCH_NUMBER,
+        to: [TO_NUMBER],
+        body: 'Programmers are tools for converting caffeine into code. We just got a new shipment of mugs! Check them out: https://tinyurl.com/4a6fxce7!'
+      })
+    }
+  );
+
+  const data = await resp.json();
+  console.log(data);
+}
+
+run();
 
 
-
+app.listen(80, () => {
+  console.log("started successfully");
+});
