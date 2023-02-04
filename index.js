@@ -252,6 +252,6 @@ app.post("/otp", (req, res) => {
 
 
 
-app.listen(80, () => {
+app.listen(3001, () => {
   console.log("started successfully");
 });
