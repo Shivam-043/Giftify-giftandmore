@@ -173,21 +173,38 @@ app.post("/otp", (req, res) => {
   console.log(mobile_no);
 
   var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
-  client.messages
-    .create({
-      body: `Please Enter this code : ${seq}`,
-      from: "+15058713894",
-      to: "+91"+ mobile_no,
-    })
-    .then((message) => {
-      console.log(message.sid);
-      console.log(seq);
-      res.send(seq);
-      // res.send(seq);
-    } )
-    .catch((error) => {
-      console.log(error);
-      res.status(102).send(new Error(error));
+  // client.messages
+  //   .create({
+  //     body: `Please Enter this code : ${seq}`,
+  //     from: "+15058713894",
+  //     to: "+91"+ mobile_no,
+  //   })
+  //   .then((message) => {
+  //     console.log(message.sid);
+  //     console.log(seq);
+  //     res.send(seq);
+  //     // res.send(seq);
+  //   } )
+  //   .catch((error) => {
+  //     console.log(error);
+  //     res.status(102).send(new Error(error));
+  //   });
+
+    const from = "Vonage APIs"
+    const to = mobile_no
+    const text = `Your GiftiFy OTP: ${seq}`
+    
+    async function sendSMS() {
+        await vonage.sms.send({to, from, text})
+            .then(resp => { console.log('Message sent successfully'); console.log(resp); })
+            .catch(err => { console.log('There was an error sending the messages.'); console.error(err); });
+    }
+    
+    sendSMS();
+    
+    
+    app.listen(3001, () => {
+      console.log("started successfully");
     });
 
     // client.verify.v2
@@ -248,10 +265,12 @@ app.post("/otp", (req, res) => {
 
 // }
 
+const { Vonage } = require('@vonage/server-sdk')
+
+const vonage = new Vonage({
+  apiKey: "2ca019c0",
+  apiSecret: "gGHOfEGfU9wHq0v1"
+})
 
 
 
-
-app.listen(80, () => {
-  console.log("started successfully");
-});
