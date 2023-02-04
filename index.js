@@ -173,22 +173,22 @@ app.post("/otp", (req, res) => {
   console.log(mobile_no);
 
   var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
-  client.messages
-    .create({
-      body: `Please Enter this code : ${seq}`,
-      from: "+15058713894",
-      to: "+91"+ mobile_no,
-    })
-    .then((message) => {
-      console.log(message.sid);
-      console.log(seq);
-      res.send(seq);
-      // res.send(seq);
-    } )
-    .catch((error) => {
-      console.log(error);
-      res.status(102).send(new Error(error));
-    });
+  // client.messages
+  //   .create({
+  //     body: `Please Enter this code : ${seq}`,
+  //     from: "+15058713894",
+  //     to: "+91"+ mobile_no,
+  //   })
+  //   .then((message) => {
+  //     console.log(message.sid);
+  //     console.log(seq);
+  //     res.send(seq);
+  //     // res.send(seq);
+  //   } )
+  //   .catch((error) => {
+  //     console.log(error);
+  //     res.status(102).send(new Error(error));
+  //   });
 
     client.verify.v2
     .services(verifySid)
