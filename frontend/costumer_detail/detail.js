@@ -78,53 +78,53 @@ function ValidateMobile_no(inputText) {
   }
 }
 
-function ValidateOtp() {
-  var Server2 = Server + "/otp";
-  var data = JSON.parse(localStorage.getItem("data"));
-  var product_id = localStorage.getItem("product_id");
-  var Total_price = localStorage.getItem("Total_price");
-  //   document.getElementsByTagName("input")[0].value = JSON.stringify(data.colors);
-  //   document.getElementsByTagName("input")[1].value = JSON.stringify(data.addons);
-  //   document.getElementsByTagName("input")[2].value = product_id;
-  //   document.getElementsByTagName("input")[3].value = Total_price;
-  var data = {
-    colors: JSON.stringify(data.colors),
-    addons: JSON.stringify(data.addons),
-    check_types: JSON.stringify(data.check_types),
-    occasion: JSON.stringify(data.occasion),
-    occ_text: JSON.stringify(data.occ_text),
-    text_screen: JSON.stringify(data.text_screen),
-    special_product: JSON.stringify(data.special_product),
-    product_id: product_id,
-    total_price: Total_price,
-    name: document.forms[0].name.value,
-    email: document.forms[0].email.value,
-    mobile_no: document.forms[0].mobile_no.value,
-    address: document.forms[0].address.value,
-    Name_on_Gift: document.forms[0].Name_on_Gift.value,
-  };
-  var data2 = {
-    mob: data.mobile_no,
-  };
-  if (
-    ValidateEmail(data.email) &&
-    ValidateMobile_no(data.mobile_no) 
-  ) {
-    axios
-      .post(Server2, data2)
-      .then((res) => {
-        // console.log(res.data);
+// function ValidateOtp() {
+//   var Server2 = Server + "/otp";
+//   var data = JSON.parse(localStorage.getItem("data"));
+//   var product_id = localStorage.getItem("product_id");
+//   var Total_price = localStorage.getItem("Total_price");
+//   //   document.getElementsByTagName("input")[0].value = JSON.stringify(data.colors);
+//   //   document.getElementsByTagName("input")[1].value = JSON.stringify(data.addons);
+//   //   document.getElementsByTagName("input")[2].value = product_id;
+//   //   document.getElementsByTagName("input")[3].value = Total_price;
+//   var data = {
+//     colors: JSON.stringify(data.colors),
+//     addons: JSON.stringify(data.addons),
+//     check_types: JSON.stringify(data.check_types),
+//     occasion: JSON.stringify(data.occasion),
+//     occ_text: JSON.stringify(data.occ_text),
+//     text_screen: JSON.stringify(data.text_screen),
+//     special_product: JSON.stringify(data.special_product),
+//     product_id: product_id,
+//     total_price: Total_price,
+//     name: document.forms[0].name.value,
+//     email: document.forms[0].email.value,
+//     mobile_no: document.forms[0].mobile_no.value,
+//     address: document.forms[0].address.value,
+//     Name_on_Gift: document.forms[0].Name_on_Gift.value,
+//   };
+//   var data2 = {
+//     mob: data.mobile_no,
+//   };
+//   if (
+//     ValidateEmail(data.email) &&
+//     ValidateMobile_no(data.mobile_no) 
+//   ) {
+//     axios
+//       .post(Server2, data2)
+//       .then((res) => {
+//         // console.log(res.data);
 
-        var userOtp = prompt("Enter OTP");
-        if (userOtp == res.data) {
-          alert("correct otp");
-          formaction();
-        } else {
-          alert("wrong OTP");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-}
+//         var userOtp = prompt("Enter OTP");
+//         if (userOtp == res.data) {
+//           alert("correct otp");
+//           formaction();
+//         } else {
+//           alert("wrong OTP");
+//         }
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       });
+//   }
+// }

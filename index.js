@@ -172,7 +172,7 @@ app.post("/otp", (req, res) => {
   var mobile_no = req.body.mob;
   console.log(mobile_no);
 
-  var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+  // var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
   // client.messages
   //   .create({
   //     body: `Please Enter this code : ${seq}`,
@@ -198,10 +198,11 @@ app.post("/otp", (req, res) => {
       console.log(seq);
       res.send(seq);
       const readline = require("readline").createInterface({
-        input: process.stdin,
-        output: process.stdout,
-      });
-      console.log(otpCode);
+            body: `Please Enter this code : ${seq}`,
+            from: "+15058713894",
+            to: "+91"+ mobile_no,
+          });
+      
       readline.question("Please enter the OTP:", (otpCode) => {
         client.verify.v2
           .services(verifySid)

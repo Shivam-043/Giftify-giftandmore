@@ -570,6 +570,13 @@ body {
   font-size: 15px;
   cursor: pointer;
   margin-top: 400px;
+  align-items: stretch;
+    justify-content: space-around;
+    display: flex;
+}
+
+.items span {
+  width: 0px;
 }
 
 #product-image {
@@ -1221,12 +1228,21 @@ span {
     left: 10%;
     transition: 0.3s ease;
     width: 300vw;
-    top: 8000px;
+    top: 7500px;
+    height: 95vh;
   }
 
   #product-addon .header {
     width: 400vw;
+    
   }
+
+  #product-addon .header h3{
+    font-size: 60px;
+    width: 100vw;
+  }
+
+
 
   /* h3 {
     width: 200px;
@@ -1399,18 +1415,60 @@ span {
   }
 
   #product-choose-color {
-    width: 250vw;
+    /* width: 250vw; */
     top: 7500px;
+    left: 10%;
+  }
+
+  #product-choose-color h3 , #product-choose-color .color-screen h4{
+    font-size: 70px;
+  }
+
+  #product-choose-color p{
+    font-size: 30px;
+  }
+
+  #close_color{
+    font-size: 40px;
+    margin-top: 20px;
   }
 
   #product-choose-color .color-screen {
-    width: 250vw;
+    width: 350vw;
+    background-color: #fff8e7;
+    align-items: flex-start;
+    height: 95vh;
   }
 
   #product-addon .add_on {
-    width: 300vw;
+    width: 350vw;
+    background-color: #fff8e7;
+    height: 95vh;
   }
 
+  #product-addon h4{
+    font-size: 60px;
+  }
+
+  #product-addon p{
+    font-size: 40px;
+  }
+
+  #product-addon .add_on_item{
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+
+  .checkbox{
+    top: 15px;
+    font-size: 20px;
+  }
+
+  #product-addon .amount{
+    font-size: 40px;
+    justify-content: space-around;
+    display: flex;
+  }
   /* #big_content , #choose_type, #choose_type {
         width: 300vw;
     } */
@@ -1435,7 +1493,46 @@ span {
   }
 
   #choose_type h3{
+    margin-top: 22vh;
     width: 100vw;
+  }
+
+  #cart-extra h3{
+    font-size: 80px;
+  }
+
+  #coupon input{
+    font-size: 40px;
+  }
+
+  #subtotal table td{
+    font-size: 30px;
+  }
+
+  #coupon button, #subtotal button{
+    font-size: 30px;
+  }
+
+
+  #cart_id table thead td{
+    font-size: 35px;
+  }
+
+  #cart_id table tbody tr td{
+    font-size: 35px;
+  }
+
+  @viewport {
+    width: device-width;
+      zoom: 0;
+      min-zoom: 0;
+      max-zoom: 3;
+      user-zoom:fixed;
+  }
+
+  #cart_id table td:nth-child(4) input
+  {
+    font-size: 60px;
   }
 
 }
