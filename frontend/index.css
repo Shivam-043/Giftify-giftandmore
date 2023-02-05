@@ -575,6 +575,20 @@ body {
     display: flex;
 }
 
+.amount_all{
+  background-color: #60b246;
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: -300px;
+  align-items: stretch;
+    justify-content: space-around;
+    display: flex;
+
+}
+
 .items span {
   width: 0px;
 }

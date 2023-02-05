@@ -248,14 +248,11 @@ function set_value() {
             </div>
           </div>
         </div>
-      </section>
-      <div class="amount" onclick="addTo_cart()" method="post" action="/">
-          <span class="total" style="font-weight: 600;">Total <span id="rupee" name="rupee"></span></span>
-          <span class="items" style="float: right; text-transform: uppercase;">Add Item</span>
-        </div>`;
+      </section>`;
       } else if (res.data[0].brand == "Big_Gift") {
         brand = "Big_Gift";
         var buttons = document.getElementsByClassName("cart_item")[0];
+        document.getElementsByClassName("amount_all")[0].style.display = "none";
         buttons.innerHTML += `<div id="big_content"><section id="choose_type">
         <div class="color-screen" style="height: 20vh;">
           <div class="header1">
