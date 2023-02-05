@@ -1158,7 +1158,8 @@ span {
 
 @media (max-width: 450px) {
   body {
-    width: 400vw;
+    width: 450%;
+    z-index: 1000;
   }
 
   #mobile {
@@ -1238,11 +1239,11 @@ span {
   #product-addon {
     background-color: #fff8e7;
     position: absolute;
-    top: 100px;
+    /* top: 100px; */
     left: 10%;
     transition: 0.3s ease;
     width: 300vw;
-    top: 7500px;
+    top: 1163vh;
     height: 95vh;
   }
 
@@ -1430,7 +1431,7 @@ span {
 
   #product-choose-color {
     /* width: 250vw; */
-    top: 7500px;
+    top: 1163vh;
     left: 10%;
   }
 
